@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar color="login" class="inicio">
+    <ion-buttons slot="start">
+        <ion-back-button icon="arrow-back" defaultHref="arrow">
+        </ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header color="morado" class="rosa1">
+      <ion-card-title color="negro" class="uno" >Documentacion</ion-card-title>
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-checkbox justify="space-between">Copia de Acta de Nacimiento</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Copia de la Cartilla de Vacunacion (Actualizada)</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">2 Fotografias tamaño infantil a color</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Examen Medico</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Copia de la CURP</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Recibo de Nomina o carta de trabajo, en caso de Alumno(a),
+          copia de la credencial de la UTCJ</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Copia de comprobante de domicilio</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Copia credencial de elector y CURP (Madre, Padre y Tutor)</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">2 Fotografias del padre</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">2 Fotografias de la madre</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">2 Fotografias del tutor</ion-checkbox>
+      </ion-item>
+      <br/>
+    </ion-list>
+
+
+    <ion-card-header color="morado" class="rosa2">
+      <ion-card-title class="dos" color="negro" >Ingrese:</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <br/>
+      <ion-input label="Nombre de la madre" label-placement="floating" fill="outline" placeholder="Ingrese nombre de la madre"></ion-input>
+      <br />
+      <ion-input label="Nombre del padre" label-placement="floating" fill="outline" placeholder="Ingrese nombre del padre"></ion-input>
+      <br />
+      <ion-input label="Nombre del niño" label-placement="floating" fill="outline" placeholder="Ingrese nombre del niño"></ion-input>
+      <br />
+      <ion-input label="Edad" label-placement="floating" fill="outline" placeholder="Ingrese edad"></ion-input>
+      <ion-card-header>
+        <ion-card-title>Salon</ion-card-title>
+      </ion-card-header>
+      <ion-list>
+      <ion-item>
+        <ion-checkbox justify="space-between">1</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">2</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">3</ion-checkbox>
+      </ion-item>
+    </ion-list>
+      <br />
+      <ion-input label="Telefono" label-placement="floating" fill="outline" placeholder="Ingrese telefono"></ion-input>
+      <ion-card-header>
+        <ion-card-title>Sexo</ion-card-title>
+      </ion-card-header>
+      <ion-list>
+      <ion-item>
+        <ion-checkbox justify="space-between">Femenino</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Masculino</ion-checkbox>
+      </ion-item>
+    </ion-list>
+      <br />
+      <ion-card-header>
+        <ion-card-title>¿Cuenta con hermanos?</ion-card-title>
+      </ion-card-header>
+      <ion-list>
+      <ion-item>
+        <ion-checkbox justify="space-between">Si</ion-checkbox>
+      </ion-item>
+      <ion-input label="¿Cuantos?" label-placement="floating" fill="outline" placeholder="Ingrese numero de hermanos"></ion-input>
+      <br />
+      <ion-item>
+        <ion-checkbox justify="space-between">NO</ion-checkbox>
+      </ion-item>
+    </ion-list>
+      <br />
+      <ion-input label="¿Requiere un cuidado en especial?" label-placement="floating" fill="outline" placeholder="Ingrese los cuidados"></ion-input>
+      <br />
+
+    </ion-card-content>
+    
+    <ion-card-header color="morado" class="rosa3" >
+      <ion-card-title class="tres" color="negro" >Registro App</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioRegistro">
+        <br/>
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input formControlName="nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirmar contraseña</ion-label>
+          <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
+        </ion-item>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+    <button class="btn" id="open-loading" [routerLink]="['/tab3']">Registrar</button>
+    <ion-loading trigger="open-loading" message="Registrando, por favor espera..." duration="3000"></ion-loading>
+  
+  </ion-content>
+
+

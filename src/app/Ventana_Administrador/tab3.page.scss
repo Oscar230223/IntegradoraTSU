@@ -1,0 +1,40 @@
+ion-toolbar{
+    --background: url(../imagenes/dos.png);
+}
+.uno{
+    margin-left: 20px
+}
+.gris{
+    background:#8f8e8e ;
+    color: white;
+    margin-left: 610px;
+    padding: 15px 35px;
+    border-radius: 15px;
+    font-size: 15px;
+    margin-top: auto;
+
+}
+.gris1{
+    background-color:#8f8e8e;
+}
+
+
+ion-content{
+    --background:url(../imagenes/dos.png) no-repeat center center / cover;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+@media (max-width: 800px) {
+    ion-content{
+        --background:url(../imagenes/2.png) no-repeat center center / cover;
+        margin-top: auto;
+        margin-bottom: auto;
+        
+    }
+    .gris{
+ 
+        color: white;
+        margin-left: 55px;
+    
+    }
+}

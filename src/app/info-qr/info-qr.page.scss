@@ -1,0 +1,29 @@
+ion-toolbar{
+    --background: url(../imagenes/dos.png);
+}
+ion-content{
+    --background:url(../imagenes/dos.png) no-repeat center center / cover;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+ion-img{
+    width: 400px;
+    margin-top: 50px;
+    margin-left: 475px;
+    border-image: black;
+}
+
+@media (max-width: 800px) {
+    ion-content{
+        --background:url(../imagenes/2.png) no-repeat center center / cover;
+        margin-top: auto;
+        margin-bottom: auto;
+        
+    }
+    ion-img{
+       width: 250px;
+       margin-top: 70px;
+       margin-left: 25px;
+    }
+}

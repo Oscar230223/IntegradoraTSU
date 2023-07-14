@@ -1,0 +1,58 @@
+ion-toolbar{
+    --background:url(../imagenes/dos.png);
+}
+.btn {
+    background-color: #8f8e8e;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 250px;
+    margin-left: 615px;
+}
+ion-title{
+    position: absolute;
+    left: 520px;
+    margin-top: -13px;
+    font-size: 30px;
+    color: #8d5ba5;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+}
+ion-content{
+    --background:url(../imagenes/dos.png) no-repeat center center / cover;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    
+}
+
+
+
+//esto es del apartado de celular mo que esta con @media se modifica con el mismo nombre de los estilos
+//para adaptarlo a celular
+@media (max-width: 800px) {
+ion-content{
+    --background:url(../imagenes/2.png) no-repeat center center / cover;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+.btn {
+    background-color: #8f8e8e;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    font-size: 20px;
+    margin-top: 175px;
+    margin-left: 85px;
+}
+ion-title{
+    position: absolute;
+    left: 35px;
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+
+}

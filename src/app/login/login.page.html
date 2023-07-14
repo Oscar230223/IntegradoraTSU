@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-icon name="person-circle-outline" color="login"></ion-icon>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="formularioLogin">
+        <ion-input label="Nombre" label-placement="floating" fill="outline"></ion-input>
+        <br/>
+        <ion-input label="Contraseña" label-placement="floating" fill="outline" ></ion-input>
+      </form>
+      <br>
+      <button class="btn" id="open-loading" [routerLink]="['/tab1']">Iniciar Sesion</button>
+      <ion-loading trigger="open-loading" message="Iniciando, por favor espera..." duration="3000"></ion-loading>
+      <button class="btn2" [routerLink]="['/tab3']">Sesion Administrador</button>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

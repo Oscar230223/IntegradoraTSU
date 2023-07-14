@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>TarjetaRFID</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">TarjetaRFID</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Generar TarjetaRFID</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    Puedes Crear,Borrar y Actualizar TarjetaRFID para los clientes
+  </ion-card-content>
+
+  <ion-button [routerLink]= "['/crear-rfid']" fill="clear">Crear</ion-button>
+  <ion-button [routerLink]= "['/borrar-rfid']" fill="clear">Borrar</ion-button>
+  <ion-button [routerLink]= "['/actualizar-rfid']"fill="clear">Actualizar</ion-button>
+
+</ion-card>

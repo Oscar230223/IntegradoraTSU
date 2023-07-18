@@ -1,0 +1,39 @@
+ion-toolbar{
+    background: url(../imagenes/color.png);
+}
+.bt{
+    background-color: #8f8e8e;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-size: 15px;
+    margin-top: 3px;
+    margin-left: 610px;
+
+    
+}
+ion-content{
+    --background:#ececec;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+@media (max-width: 800px) {
+    ion-content{
+        --background:#ececec;
+        margin-top: auto;
+        margin-bottom: auto;
+        
+    }
+    .bt{
+        background-color: #8f8e8e;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 15px;
+        font-size: 15px;
+        margin-top: 3px;
+        margin-left: 75px;
+        
+    }
+ 
+}

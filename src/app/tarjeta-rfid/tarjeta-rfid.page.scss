@@ -1,0 +1,17 @@
+ion-toolbar{
+    background: url(../imagenes/color.png);
+}
+ion-content{
+    --background:#ececec;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media (max-width: 800px) {
+    ion-content{
+        background:#ececec;
+        margin-top: auto;
+        margin-bottom: auto;
+        
+    }
+}

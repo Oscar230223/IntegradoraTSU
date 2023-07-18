@@ -41,7 +41,7 @@ const routes: Routes = [
   },
 
   //Confirmar info del QR
-
+  
   {
     path: 'info-qr',
     loadChildren: () => import('./info-qr/info-qr.module').then( m => m.InfoQRPageModule)

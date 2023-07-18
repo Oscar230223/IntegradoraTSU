@@ -1,5 +1,5 @@
 ion-toolbar{
-    --background:url(../imagenes/dos.png);
+    background:url(../imagenes/color.png);
 }
 .btn {
     background-color: #8f8e8e;
@@ -20,7 +20,7 @@ ion-title{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
 }
 ion-content{
-    --background:url(../imagenes/dos.png) no-repeat center center / cover;
+    --background:url(../imagenes/color.png) no-repeat center center / cover;
     margin-top: auto;
     margin-bottom: auto;
 
@@ -33,7 +33,7 @@ ion-content{
 //para adaptarlo a celular
 @media (max-width: 800px) {
 ion-content{
-    --background:url(../imagenes/2.png) no-repeat center center / cover;
+    --background:url(../imagenes/color.png) no-repeat center center / cover;
     margin-top: auto;
     margin-bottom: auto;
     

@@ -1,11 +1,11 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'com.technyks.splashAbdIconApp',
   appName: 'Integradora',
   webDir: 'www',
   server: {
-    androidScheme: 'https'
+    androidScheme: 'https',
   }
 };
 

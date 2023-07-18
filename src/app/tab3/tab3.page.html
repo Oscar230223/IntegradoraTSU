@@ -1,8 +1,10 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+  <ion-toolbar class="verde" color="inicio" >
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back" defaultHref="arrow">
+      </ion-back-button>
+    </ion-buttons>
+    
   </ion-toolbar>
 </ion-header>
 
@@ -12,6 +14,53 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-item>
+            <ion-input label="Nombre del niño" labelPlacement="floating" placeholder="Enter text"></ion-input>
+          </ion-item>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-item>
+            <ion-input label="Nombre del niño" labelPlacement="floating" placeholder="Enter text"></ion-input>
+          </ion-item>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-item>
+            <ion-input label="Nombre del niño" labelPlacement="floating" placeholder="Enter text"></ion-input>
+          </ion-item>
+        </ion-item>
+  
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+          </ion-thumbnail>
+          <ion-item>
+            <ion-input label="Nombre del niño" labelPlacement="floating" placeholder="Enter text"></ion-input>
+          </ion-item>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <button class="gris" color="gris" [routerLink]="['/registro']">Registrar Usuario</button>
+    <button class="gris" color="gris" [routerLink]="['/tarjeta-rfid']">Generar TarjetaRFID</button>
+ 
 </ion-content>

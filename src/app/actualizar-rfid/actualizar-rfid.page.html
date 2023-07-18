@@ -1,5 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="verde">
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back" defaultHref="arrow">
+      </ion-back-button>
+    </ion-buttons>
     <ion-title>ActualizarRFID</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,14 +11,11 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">ActualizarRFID</ion-title>
+      <ion-title size="large">Actualizar RFID</ion-title>
     </ion-toolbar>
   </ion-header>
-</ion-content>
+
 <ion-card color="secondary">
-  <ion-card-header>
-    ActualizarRFID
-  </ion-card-header>
   <ion-list>
     <ion-item>
       <ion-input label="Nombre del niño"></ion-input>
@@ -26,6 +27,8 @@
       <ion-input label="Nombre del Padre"></ion-input>
     </ion-item>
   </ion-list>
-  <button class="btn" id="open-loading" [routerLink]="['/tarjeta-rfid']">Actualizar</button>
-  <ion-loading trigger="open-loading" message="Actualizando tarjeta rfid, por favor espera..." duration="3000"></ion-loading>
 </ion-card>
+  <button class="btn" id="open-loading" [routerLink]="['/tarjeta-rfid']">Actualizar</button>
+  <ion-loading trigger="open-loading" message="Actualizando tarjeta rfid, por favor espere..." duration="3000"></ion-loading>
+
+</ion-content>

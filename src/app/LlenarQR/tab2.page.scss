@@ -1,5 +1,5 @@
 ion-toolbar{
-    background: url(../imagenes/dos.png);
+    background: url(../imagenes/color.png);
 }
 .bt{
     background-color: #8f8e8e;
@@ -13,14 +13,14 @@ ion-toolbar{
     
 }
 ion-content{
-    --background:url(../imagenes/dos.png) no-repeat center center / cover;
+    --background:#ececec;
     margin-top: auto;
     margin-bottom: auto;
     
 }
 @media (max-width: 800px) {
     ion-content{
-        --background:url(../imagenes/2.png) no-repeat center center / cover;
+        --background:#ececec;
         margin-top: auto;
         margin-bottom: auto;
         

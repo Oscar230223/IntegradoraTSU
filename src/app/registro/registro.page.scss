@@ -1,14 +1,14 @@
 ion-toolbar{
-    --background: url(../imagenes/dos.png);
+    background: url(../imagenes/color.png);
 }
 .rosa1{
-    background-color: #8d5ba5;
+    background-color: #FFD593;
 }
 .rosa2{
-    background-color: #ff8323;
+    background-color: #A9F9AA;
 }
 .rosa3{
-    background-color: #f9a8c9;
+    background-color: #FFD593;
 }
 .btn{
     color: white;
@@ -22,13 +22,10 @@ ion-toolbar{
 @media (max-width: 800px) {
      
     .btn {
-        margin-left: 100px;
+        margin-left: 90px;
     }
 }
 
-.rosa1{
-    background-color: #8d5ba5;
-}
 ion-card-title.uno{
     color: black;
 }
@@ -40,7 +37,7 @@ ion-card-title.tres{
 }
 
 ion-content{
-    --background:url(../imagenes/dos.png) no-repeat center center / cover;
+    --background:#ececec; 
     margin-top: auto;
     margin-bottom: auto;
     
@@ -48,7 +45,7 @@ ion-content{
 
 @media (max-width: 800px) {
     ion-content{
-        --background:url(../imagenes/2.png) no-repeat center center / cover;
+        --background:url(../imagenes/cel.png) no-repeat center center / cover;
         margin-top: auto;
         margin-bottom: auto;
         

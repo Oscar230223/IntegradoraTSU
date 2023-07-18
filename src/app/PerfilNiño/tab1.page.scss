@@ -1,5 +1,5 @@
-.verde1{
-    --background: url(../imagenes/dos.png);
+.uno{
+    background: url(../imagenes/color.png);
 }
 .verde{
     background-color:var(--ion-color-inicio);
@@ -13,6 +13,7 @@
     
 }
 .btn2{
+    background-color: #8f8e8e;
     margin-left: 660px;
     padding: 20px 35px;
     border-radius: 15px;
@@ -20,7 +21,7 @@
 
 }
 ion-content{
-    --background:url(../imagenes/dos.png) no-repeat center center / cover;
+    --background: #ececec;
     margin-top: auto;
     margin-bottom: auto;   
 }
@@ -33,8 +34,7 @@ ion-content{
 
 @media (max-width: 800px) {
     ion-content{
-        --background:url(../imagenes/2.png) no-repeat center center / cover;
-        margin-top: auto;
+        background: #ececec;
         margin-bottom: auto;   
     }
     .btn2 {

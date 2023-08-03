@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "logines-535eb"
+  },
+  "targets": {
+    "logines-535eb": {
+      "hosting": {
+        "app": [
+          "logines-535eb"
+        ]
+      }
+    }
+  }
+}

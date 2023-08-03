@@ -116,25 +116,17 @@
     <ion-card-content>
       <form [formGroup]="formularioRegistro">
         <br/>
-        <ion-item>
-          <ion-label position="floating">Nombre</ion-label>
-          <ion-input formControlName="nombre"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Contraseña</ion-label>
-          <ion-input formControlName="password" type="password" ></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Confirmar contraseña</ion-label>
-          <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
-        </ion-item>
+          <ion-input formControlName="email" placaholder="email"
+          label-placement="floating" fill="outline" label="Correo"></ion-input>
+          <br/>  
+          <ion-input formControlName="password" placeholder="password" type="password"
+          label-placement="floating" fill="outline" label="Contraseña"></ion-input>
       </form>
-    </ion-card-content>
-  </ion-card>
-
-    <button class="btn" id="open-loading" [routerLink]="['/tab3']">Registrar</button>
+      <br/>
+    <button class="btn" id="open-loading" (click)="signUp()" [routerLink]="['/tab3']">Registrar</button>
     <ion-loading trigger="open-loading" message="Registrando, por favor espera..." duration="3000"></ion-loading>
-  
+    <br/></ion-card-content>
+  </ion-card>
   </ion-content>
 
 

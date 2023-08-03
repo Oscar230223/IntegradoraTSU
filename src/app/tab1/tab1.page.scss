@@ -1,25 +1,47 @@
+.content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 20px;
+    }
 .uno{
     background: url(../imagenes/color.png);
+    margin-top: auto;
+    margin-bottom: auto;   
 }
 .verde{
     background-color:var(--ion-color-inicio);
 }
 .bt{
-    background-color: #8f8e8e;
-    color: white;
+    background: url(/IntegradoraTSU/src/assets/img/qr_code_black_24dp.svg);
     padding: 15px 35px;
     border-radius: 15px;
     font-size: 15px;
     
 }
 .btn2{
-    background-color: #8f8e8e;
-    margin-left: 660px;
+
+    margin-left: 600px;
     padding: 20px 35px;
+    cursor: pointer;
     border-radius: 15px;
-    font-size: 15px;
+    //font-size: 15px;
+    width: 50px;
+    height: 50px;
 
 }
+button img{
+    width: 500px;
+    height: 500px;
+}
+
 ion-content{
     --background: #ececec;
     margin-top: auto;
@@ -31,6 +53,10 @@ ion-content{
     margin-top: 10px;
     width: 500px;
     }
+.calendar{
+    width: 20px;
+    height: 20px;
+}
 
 @media (max-width: 800px) {
     ion-content{
@@ -38,12 +64,11 @@ ion-content{
         margin-bottom: auto;   
     }
     .btn2 {
-      
-        padding: 15px 35px;
-        border-radius: 15px;
-        font-size: 15px;
-        margin-top: 2px;
-        margin-left: 110px;
+
+        align-items: center;
+        margin-left: 25%;
+        margin-right: 25%;
+        width: 50%;
     }
     .img{
         width: 200px;

@@ -65,6 +65,10 @@ const routes: Routes = [
   {
     path: 'actualizar-rfid',
     loadChildren: () => import('./actualizar-rfid/actualizar-rfid.module').then( m => m.ActualizarRFIDPageModule)
+  },
+  {
+    path: 'documentos',
+    loadChildren: () => import('./documentos/documentos.module').then( m => m.DocumentosPageModule)
   }
 ];
 @NgModule({

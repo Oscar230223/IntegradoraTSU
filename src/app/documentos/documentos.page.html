@@ -1,13 +1,116 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>documentos</ion-title>
+  <ion-toolbar color="verde">
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back" defaultHref="arrow">
+      </ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+ 
+<ion-content>
+  <ion-card>
+    <ion-card-header color="verde" class="uno">
+      <ion-card-title color="negro" class="uno1" >Documentación</ion-card-title>
+    </ion-card-header>
+    <ion-list>
+      <ion-item>
+        <ion-checkbox justify="space-between">Copia de Acta de Nacimiento</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Copia de la Cartilla de Vacunación (Actualizada)</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">2 Fotografías tamaño infantil a color</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Examén Médico</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Copia de la CURP</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Recibo de Nomina o carta de trabajo, en caso de Alumno(a),
+          copia de la credencial de la UTCJ</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Copia de comprobante de domicilio</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Copia credencial de elector y CURP (Madre, Padre y Tutor)</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">2 Fotografías del padre</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">2 Fotografías de la madre</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">2 Fotografías del tutor</ion-checkbox>
+      </ion-item>
+      <br/>
+    </ion-list>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">documentos</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+    <ion-card-header color="morado" class="dos">
+      <ion-card-title class="dos2" color="negro" >Ingresé:</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <br/>
+      <ion-input label="Nombre de la madre" label-placement="floating" fill="outline" placeholder="Ingresé nombre de la madre"></ion-input>
+      <br />
+      <ion-input label="Nombre del padre" label-placement="floating" fill="outline" placeholder="Ingresé nombre del padre"></ion-input>
+      <br />
+      <ion-input label="Nombre del niño" label-placement="floating" fill="outline" placeholder="Ingresé nombre del niño"></ion-input>
+      <br />
+      <ion-input label="Edad" label-placement="floating" fill="outline" placeholder="Ingresé edad"></ion-input>
+      <ion-card-header>
+        <ion-card-title>Salón</ion-card-title>
+      </ion-card-header>
+      <ion-list>
+      <ion-item>
+        <ion-checkbox justify="space-between">1</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">2</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">3</ion-checkbox>
+      </ion-item>
+    </ion-list>
+      <br />
+      <ion-input label="Teléfono" label-placement="floating" fill="outline" placeholder="Ingresé teléfono"></ion-input>
+      <ion-card-header>
+        <ion-card-title>Sexo</ion-card-title>
+      </ion-card-header>
+      <ion-list>
+      <ion-item>
+        <ion-checkbox justify="space-between">Femenino</ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-checkbox justify="space-between">Masculino</ion-checkbox>
+      </ion-item>
+    </ion-list>
+      <br />
+      <ion-card-header>
+        <ion-card-title>¿Cuenta con hermanos?</ion-card-title>
+      </ion-card-header>
+      <ion-list>
+      <ion-item>
+        <ion-checkbox justify="space-between">Si</ion-checkbox>
+      </ion-item>
+      <ion-input label="¿Cuántos?" label-placement="floating" fill="outline" placeholder="Ingresé numero de hermanos"></ion-input>
+      <br />
+      <ion-item>
+        <ion-checkbox justify="space-between">No</ion-checkbox>
+      </ion-item>
+    </ion-list>
+      <br />
+      <ion-input label="¿Requiere un cuidado en especial?" label-placement="floating" fill="outline" placeholder="Ingresé los cuidados"></ion-input>
+      <br/>
+      <button class="btn" id="open-loading"[routerLink]="['/registro']">Siguiente</button>
+      <br/>
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+

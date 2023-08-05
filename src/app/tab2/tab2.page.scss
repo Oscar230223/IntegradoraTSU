@@ -1,16 +1,21 @@
 ion-toolbar{
-    background: url(../imagenes/color.png);
+    background: #A9F9AA;
 }
 .bt{
-    background-color: #8f8e8e;
-    color: white;
+    color: black;
     padding: 15px 30px;
     border-radius: 15px;
     font-size: 15px;
-    margin-top: 3px;
-    margin-left: 610px;
-
-    
+    margin-left: 620px;
+    width: 50px;
+    height: 50px;
+}
+.qr{
+    width: 50px;
+    height: 50px;
+    margin-left: 620px;
+    color: black;
+    cursor: pointer;
 }
 ion-content{
     --background:#ececec;
@@ -25,15 +30,39 @@ ion-content{
         margin-bottom: auto;
         
     }
-    .bt{
-        background-color: #8f8e8e;
-        color: white;
-        padding: 15px 30px;
-        border-radius: 15px;
-        font-size: 15px;
-        margin-top: 3px;
-        margin-left: 75px;
-        
+    .qr{
+        width: 50px;
+        height: 50px;
+        color: black;
+        cursor: pointer;
+        margin-left: 45%;
+        margin-top: 5px;
     }
  
+}
+.uno{
+    background-color: #C8E4B2;
+}
+ion-card-title.uno1{
+    color: black;
+    font-size: 20px;
+}
+.calendar{
+    width: 20px;
+    height: 20px;
+}
+.btn2{
+    margin-left: 650px;
+    padding: 20px 35px;
+    cursor: pointer;
+    border-radius: 15px;
+    //font-size: 15px;
+    width: 20px;
+    height: 20px;
+    margin-top: 50px;
+
+}
+.img2{
+    width: 50px;
+    height: 50px;
 }

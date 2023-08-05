@@ -20,22 +20,21 @@
       Informacion Basica del niño
     </ion-card-content>
   </ion-card>
-  <ion-card>
+  <ion-card class="dos">
     <ion-card-content>
       <div class="wrapper">
         <div class="ion-activatable ripple-parent circle">
-          <b>Ingresos/Salidas</b>
+          <b class="letra">Ingresos/Salidas</b>
+          <br/>
           <ion-ripple-effect type="unbounded"></ion-ripple-effect>
         </div>
       </div>
-      <button class="bt" [routerLink]="['/salidas']"><ion-icon class="calendar" name="calendar"></ion-icon>Ver historial</button>
+      <br/>
+     <ion-icon class="calendar" name="calendar-outline" [routerLink]="['/salidas']"></ion-icon>
 
     </ion-card-content>
   </ion-card>
 
-
-  <buttons class="btn2" [routerLink]="['/tab2']">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCRmCS1UF8zZm7to0ULVATi9Ahht1iSPSG8AXxxLd52w&s" alt="no">
-  </buttons>
+  <ion-icon class="qr" name="qr-code-outline" [routerLink]="['/tab2']"></ion-icon>
 
 </ion-content>

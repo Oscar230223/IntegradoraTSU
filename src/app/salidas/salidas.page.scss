@@ -1,3 +1,11 @@
 ion-toolbar{
-    background: url(../imagenes/color.png);
+    background: #A9F9AA;
+}
+ion-datetime{
+    margin-left: 500px;
+}
+@media (max-width: 800px) {
+    ion-datetime{
+        margin-left: 30px;
+    }
 }

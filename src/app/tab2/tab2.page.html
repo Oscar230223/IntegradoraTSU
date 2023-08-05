@@ -9,22 +9,23 @@
 
   <ion-content>
   <ion-card>
-    <ion-card-header>
-      <ion-card-title>Ingrese:</ion-card-title>
+    <ion-card-header color="verde" class="uno">
+      <ion-card-title color="negro" class="uno1">Ingresé:</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-     
-      <ion-input label="Nombre de la persona" label-placement="floating" fill="outline" placeholder="Ingrese nombre de la persona"></ion-input>
       <br />
-      <ion-input label="Nombre del niño" label-placement="floating" fill="outline" placeholder="Ingrese nombre del niño"></ion-input>
+      <ion-input label="Nombre de la persona" label-placement="floating" fill="outline" placeholder="Ingresé nombre de la persona"></ion-input>
       <br />
-      <ion-input label="Nombre del padre" label-placement="floating" fill="outline" placeholder="Ingrese nombre del padre"></ion-input>
+      <ion-input label="Nombre del niño" label-placement="floating" fill="outline" placeholder="Ingresé nombre del niño"></ion-input>
       <br />
-      <ion-input label="Telefono" label-placement="floating" fill="outline" placeholder="Ingrese telefono"></ion-input>
+      <ion-input label="Nombre del padre" label-placement="floating" fill="outline" placeholder="Ingresé nombre del padre"></ion-input>
       <br />
-      <ion-input label="Salon" label-placement="floating" fill="outline" placeholder="Ingrese salon"></ion-input>
+      <ion-input label="Teléfono" label-placement="floating" fill="outline" placeholder="Ingresé teléfono"></ion-input>
       <br />
-    </ion-card-content></ion-card>
-    <button class="bt" [routerLink]="['/info-qr']">Generar QR</button>
-  
+      <ion-input label="Salón" label-placement="floating" fill="outline" placeholder="Ingresé salón"></ion-input>
+      <br />
+   
+    
+    <ion-icon class="qr" name="qr-code-outline" [routerLink]="['/info-qr']"></ion-icon> </ion-card-content>
+   </ion-card>
 </ion-content>

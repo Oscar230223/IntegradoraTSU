@@ -11,10 +11,18 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import {AngularFireAuthModule} from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
+import { CrearRfidComponent } from './components/crear-rfid/crear-rfid.component';
+import { ListarRfidComponent } from './components/listar-rfid/listar-rfid.component';
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+  declarations: [
+    AppComponent,
+    CrearRfidComponent,
+    ListarRfidComponent,
+
+  ],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,
   AngularFireModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.firebaseConfig)],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

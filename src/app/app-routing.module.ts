@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+//Componentes
+import { ListarRfidComponent } from './components/listar-rfid/listar-rfid.component';
+import { CrearRfidComponent } from './components/crear-rfid/crear-rfid.component';
+
 const routes: Routes = [
+  {path: 'listar-rfid', component: ListarRfidComponent},
+  {path: 'crear-rfid', component: CrearRfidComponent },
+  {path: 'editar-rfid/:id', component: CrearRfidComponent },
   {
     path:'',
     redirectTo:'inicio',
@@ -54,7 +61,7 @@ const routes: Routes = [
     path: 'tarjeta-rfid',
     loadChildren: () => import('./tarjeta-rfid/tarjeta-rfid.module').then( m => m.TarjetaRFIDPageModule)
   },
-  {
+  /*{
     path: 'crear-rfid',
     loadChildren: () => import('./crear-rfid/crear-rfid.module').then( m => m.CrearRFIDPageModule)
   },
@@ -65,11 +72,12 @@ const routes: Routes = [
   {
     path: 'actualizar-rfid',
     loadChildren: () => import('./actualizar-rfid/actualizar-rfid.module').then( m => m.ActualizarRFIDPageModule)
-  },
+  },*/
   {
     path: 'documentos',
     loadChildren: () => import('./documentos/documentos.module').then( m => m.DocumentosPageModule)
-  }
+  },
+  {path: '**', redirectTo: '',pathMatch: 'full'}
 ];
 @NgModule({
   imports: [

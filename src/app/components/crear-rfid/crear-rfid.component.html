@@ -5,11 +5,9 @@
     <ion-title>{{ titulo }}</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
   </ion-header>
-
   <ion-card color="verde">
     <ion-list>
       <form #RFIDFormDirective="ngForm" [formGroup]="RFIDForm" (ngSubmit)="agregarRFID">
@@ -28,7 +26,6 @@
       </form>
     </ion-list>
   </ion-card>
-
   <button type="submit" class="btn" id="open-loading" [routerLink]="['/listar-rfid']">Crear</button>
   <ion-loading trigger="open-loading" message="Generando tarjeta RFID, por favor espere..." duration="3000"></ion-loading>
 </ion-content>

@@ -61,18 +61,6 @@ const routes: Routes = [
     path: 'tarjeta-rfid',
     loadChildren: () => import('./tarjeta-rfid/tarjeta-rfid.module').then( m => m.TarjetaRFIDPageModule)
   },
-  /*{
-    path: 'crear-rfid',
-    loadChildren: () => import('./crear-rfid/crear-rfid.module').then( m => m.CrearRFIDPageModule)
-  },
-  {
-    path: 'borrar-rfid',
-    loadChildren: () => import('./borrar-rfid/borrar-rfid.module').then( m => m.BorrarRFIDPageModule)
-  },
-  {
-    path: 'actualizar-rfid',
-    loadChildren: () => import('./actualizar-rfid/actualizar-rfid.module').then( m => m.ActualizarRFIDPageModule)
-  },*/
   {
     path: 'documentos',
     loadChildren: () => import('./documentos/documentos.module').then( m => m.DocumentosPageModule)

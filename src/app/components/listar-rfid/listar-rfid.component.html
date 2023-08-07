@@ -23,7 +23,7 @@
           <button (click)="EliminarRFID(rfid._id)" class="gris2" color="gris">
             <ion-icon class="card" name="card-outline"></ion-icon>Eliminar
           </button>
-          <button class="gris2" color="gris" [routerLink]="['/editar-rfid', rfid._id]">
+          <button class="gris2" color="gris" [routerLink]="['/editar-rfid/:id']">
             <ion-icon class="card" name="card-outline"></ion-icon>Actualizar
           </button>
         </ion-item>

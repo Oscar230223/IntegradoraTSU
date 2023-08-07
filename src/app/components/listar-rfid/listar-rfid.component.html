@@ -1,8 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar class="verde" color="inicio" >
+  <ion-toolbar class="verde" color="inicio">
     <ion-buttons slot="start">
     </ion-buttons>
-    
   </ion-toolbar>
 </ion-header>
 
@@ -16,47 +15,27 @@
     <ion-card-header>
       <ion-card-title>Niños</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-list>
-          <ion-item>
-            <ion-label>Nombre del niño</ion-label>
-            <ion-label>Salon</ion-label>
-            <button  class="gris" color="gris" [routerLink]="['/documentos']"><ion-icon class="person" name="person-circle-outline" ></ion-icon>Eliminar</button>
-            <button class="gris2" color="gris" [routerLink]="['/crear-rfid']"><ion-icon class="card" name="card-outline"></ion-icon>Actualizar</button>
-          </ion-item>
-          <ion-item>
-            <ion-label>Nombre del niño</ion-label>
-            <ion-label>Salon</ion-label>
-            <button  class="gris" color="gris" [routerLink]="['/documentos']"><ion-icon class="person" name="person-circle-outline" ></ion-icon>Eliminar</button>
-            <button class="gris2" color="gris" [routerLink]="['/crear-rfid']"><ion-icon class="card" name="card-outline"></ion-icon>Actualizar</button>
-          </ion-item>
-          <ion-item>
-            <ion-label>Nombre del niño</ion-label>
-            <ion-label>Salon</ion-label>
-            <button  class="gris" color="gris" [routerLink]="['/documentos']"><ion-icon class="person" name="person-circle-outline" ></ion-icon>Eliminar</button>
-            <button class="gris2" color="gris" [routerLink]="['/crear-rfid']"><ion-icon class="card" name="card-outline"></ion-icon>Actualizar</button>
-          </ion-item>
-          <ion-item>
-            <ion-label>Nombre del niño</ion-label>
-            <ion-label>Salon</ion-label>
-            <button  class="gris" color="gris" [routerLink]="['/documentos']"><ion-icon class="person" name="person-circle-outline" ></ion-icon>Eliminar</button>
-            <button class="gris2" color="gris" [routerLink]="['/crear-rfid']"><ion-icon class="card" name="card-outline"></ion-icon>Actualizar</button>
-          </ion-item>
-          <ion-item>
-            <ion-label>Nombre del niño</ion-label>
-            <ion-label>Salon</ion-label>
-            <button  class="gris" color="gris" [routerLink]="['/documentos']"><ion-icon class="person" name="person-circle-outline" ></ion-icon>Eliminar</button>
-            <button class="gris2" color="gris" [routerLink]="['/crear-rfid']"><ion-icon class="card" name="card-outline"></ion-icon>Actualizar</button>
-          </ion-item>
-        </ion-list>
+    <ion-card-content *ngIf="listaRFID.length > 0">
+      <ion-list *ngFor="let rfid of listaRFID">
+        <ion-item>
+          <ion-label>{{ rfid.NombreNino }}</ion-label>
+          <ion-label>{{ rfid.Salon }}</ion-label>
+          <button (click)="EliminarRFID(rfid._id)" class="gris2" color="gris">
+            <ion-icon class="card" name="card-outline"></ion-icon>Eliminar
+          </button>
+          <button class="gris2" color="gris" [routerLink]="['/editar-rfid', rfid._id]">
+            <ion-icon class="card" name="card-outline"></ion-icon>Actualizar
+          </button>
+        </ion-item>
       </ion-list>
     </ion-card-content>
   </ion-card>
 
-    <button  class="gris" color="gris" [routerLink]="['/documentos']"><ion-icon class="person" name="person-circle-outline" ></ion-icon>Registrar Usuario</button>
-    <button class="gris2" color="gris" [routerLink]="['/crear-rfid']"><ion-icon class="card" name="card-outline"></ion-icon>Crear TarjetaRFID</button>
-
- 
-    
+  <button class="gris" color="gris" [routerLink]="['/documentos']">
+    <ion-icon class="person" name="person-circle-outline"></ion-icon>Registrar Usuario
+  </button>
+  <button class="gris2" color="gris" [routerLink]="['/crear-rfid']">
+    <ion-icon class="card" name="card-outline"></ion-icon>Crear TarjetaRFID
+  </button>
+  
 </ion-content>

@@ -2,7 +2,7 @@
   <ion-toolbar color="verde">
     <ion-buttons slot="start">
     </ion-buttons>
-    <ion-title>Crear RFID</ion-title>
+    <ion-title>{{ titulo }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,20 +10,25 @@
   <ion-header collapse="condense">
   </ion-header>
 
-<ion-card color="verde">
-  <ion-list>
-    <ion-item>
-      <ion-input label="Nombre del niño"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Salon"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-input label="Nombre del Padre"></ion-input>
-    </ion-item>
-  </ion-list>
-</ion-card>
-<button class="btn" id="open-loading" [routerLink]="['/listar-rfid']">Crear</button>
+  <ion-card color="verde">
+    <ion-list>
+      <form #RFIDFormDirective="ngForm" [formGroup]="RFIDForm" (ngSubmit)="agregarRFID">
+        <ion-item>
+          <ion-label position="stacked">Nombre del niño</ion-label>
+          <ion-input formControlName="NombreNiño"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Salon</ion-label>
+          <ion-input formControlName="Salon"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">Nombre del Padre</ion-label>
+          <ion-input formControlName="NombrePadre"></ion-input>
+        </ion-item>
+      </form>
+    </ion-list>
+  </ion-card>
+
+  <button type="submit" class="btn" id="open-loading" [routerLink]="['/listar-rfid']">Crear</button>
   <ion-loading trigger="open-loading" message="Generando tarjeta RFID, por favor espere..." duration="3000"></ion-loading>
-<button class="btn" id="open-loading" [routerLink]="['/listar-rfid']"></button>
 </ion-content>

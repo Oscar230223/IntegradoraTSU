@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { CrearRfidComponent } from './components/crear-rfid/crear-rfid.component';
 import { ListarRfidComponent } from './components/listar-rfid/listar-rfid.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,7 @@ import { ListarRfidComponent } from './components/listar-rfid/listar-rfid.compon
     ListarRfidComponent,
 
   ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,
+  imports: [BrowserModule,ReactiveFormsModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,
   AngularFireModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.firebaseConfig)],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

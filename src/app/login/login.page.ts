@@ -40,8 +40,15 @@ export class LoginPage implements OnInit {
         })
         if(user){
           loading.dismiss()
-          this.router.navigate(['/tab1'])
+          //this.router.navigate(['/tab1'])
         }
+        if(this.formularioLogin.value.email === 'admin@utcj.edu.mx'){
+          this.router.navigate(['/listar-rfid']);
+        }
+        else{
+          this.router.navigate(['/tab1']);
+        }
+      }
         else{
           console.log('provde correct');
         }
@@ -49,4 +56,4 @@ export class LoginPage implements OnInit {
     }
   }
   
-}
+

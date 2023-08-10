@@ -18,6 +18,8 @@ export class RegistroPage implements OnInit {
      public authService:AutheticationService, public router: Router) {}
 
   ngOnInit() {
+    
+
     this.formularioRegistro = this.formBuilder.group({
       email :['',[
         Validators.required,
@@ -49,5 +51,5 @@ export class RegistroPage implements OnInit {
         
     }
   }
-  
+
 }

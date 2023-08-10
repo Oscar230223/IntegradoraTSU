@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar color="verde">
     <ion-buttons slot="start">
       <ion-back-button icon="arrow-back" defaultHref="arrow">
@@ -7,18 +7,27 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
-  <ion-card>
-    <ion-row>
-      <ion-col size="10">
-    <ion-card-header>
-      <ion-card-title>Escanéame</ion-card-title>
-    </ion-card-header>
-  <ion-header collapse="condense">
-  </ion-header>
-  <ion-img src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcSh-wrQu254qFaRcoYktJ5QmUhmuUedlbeMaQeaozAVD4lh4ICsGdBNubZ8UlMvWjKC"
-  alt="Codigo QR"></ion-img>
-  </ion-col>
-  </ion-row>
-</ion-card>
+<ion-content>
+  <ion-card class="ion-text-center">
+    <ion-card-content>
+      <qrcode [qrdata]="Hola" 
+      [width]="256" 
+      [errorCorrectionLevel]="'M'">
+    </qrcode>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button 
+  expand="block" 
+  class="ion-margin" 
+  (click)="startScan()"
+  
+>
+  Scan QR Code
+</ion-button>
+
+<ion-item >
+  <ion-label class="ion-text-wrap">Scanned Result: {{scannedResult}}</ion-label>
+</ion-item>
+
 </ion-content>

@@ -6,6 +6,8 @@ import { ListarRfidComponent } from './components/listar-rfid/listar-rfid.compon
 import { CrearRfidComponent } from './components/crear-rfid/crear-rfid.component';
 
 const routes: Routes = [
+  //login
+
   {path: 'listar-rfid', component: ListarRfidComponent},
   {path: 'crear-rfid', component: CrearRfidComponent },
   {path: 'editar-rfid/:id', component: CrearRfidComponent },

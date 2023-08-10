@@ -9,14 +9,7 @@ ion-toolbar{
     font-size: 15px;
     margin-left: 40PX;
 }
-.btn2{
-    background-color: #ececec;
-    color: white;
-    padding: 20px 30px;
-    border-radius: 15px;
-    font-size: 15px;
-    margin-left: 70px;
-}
+
 
 ion-content{
     --background: #ececec;
@@ -41,20 +34,11 @@ ion-title{
     .btn{
         background-color:#8f8e8e;
         color: white;
-        padding: 20px 30px;
         border-radius: 15px;
         font-size: auto;
         margin-left: 25%;
     }
-    .btn2{
-        background-color: #ececec;
-        color: white;
-        padding: 20px 30px;
-        border-radius: 15px;
-        font-size: 15px;
-        margin-left: 25%;
-        margin-top: 10px;
-    }
+  
     .person{
         margin-left: 35%;
         width: 100px;

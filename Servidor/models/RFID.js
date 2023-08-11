@@ -3,15 +3,15 @@ const mongoose = require('mongoose');
 const RFIDSchema = mongoose.Schema({
     NombreNino: {
         type: String,
-        required: true
+        required: false
     },
     Salon: {
-        type: Number,
-        required: true
+        type: String,
+        required: false
     },
     NombrePadre: {
         type: String,
-        required: true
+        required: false
     },
     fechaCreacion: {
         type: Date,
@@ -19,11 +19,11 @@ const RFIDSchema = mongoose.Schema({
     },
     NumeroT: {
         type: Number,
-        required: true
+        required: false
     },
     NombrePExterna: {
         type: String,
-        required: true
+        required: false
     }
 });
 

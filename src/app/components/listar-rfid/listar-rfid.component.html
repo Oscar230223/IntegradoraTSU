@@ -25,13 +25,23 @@
         <ion-item>
           <ion-label>{{ rfid.NombreNino }}</ion-label>
           <ion-label>{{ rfid.Salon }}</ion-label>
+          <ion-buttons slot="end">
+            <ion-button color="danger" (click)="eliminarRegistro(rfid)">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+            <ion-button color="primary" (click)="editarRegistro(rfid)">
+              <ion-icon name="create"></ion-icon>
+            </ion-button>
+          </ion-buttons>
         </ion-item>
       </ion-list>
     </ion-card-content>
   </ion-card>
-
   <button class="uno" color="gris" [routerLink]="['/documentos']">
     <ion-icon class="person" name="person-circle-outline"></ion-icon>Registrar Usuario
+  </button>
+  <button class="uno" color="gris" [routerLink]="['/crear-rfid']">
+    <ion-icon class="person" name="person-circle-outline"></ion-icon>Registrar RFID
   </button>
   
 </ion-content>

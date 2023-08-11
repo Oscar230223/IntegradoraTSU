@@ -31,35 +31,37 @@ export class CrearRfidComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.esEditar()
+    this.esEditar();
   }
 
-  agregarRFID() {
-    console.log(this.RFIDForm.value);
+agregarRFID(nameKid:any, classroom:any, nameDad:any) {
+  if (this.RFIDForm.valid) {
+    console.log('Formulario válido:', this.RFIDForm.value);
+    let rfid = {
+      NombreNino: nameKid.value,
+      Salon: classroom.value,
+      NombrePadre: nameDad.value
+    };
 
-    console.log(this.RFIDForm.get('NombreNiño').value);
-
-    const rfid: RFID = {
-      niño: this.RFIDForm.get('NombreNiño')?.value,
-      salon: this.RFIDForm.get('Salon')?.value,
-      padre: this.RFIDForm.get('NombrePadre')?.value,
-    }
-
-    console.log(rfid);
+    console.log('Datos a enviar:', rfid);
     this._RFIDService.GuardarProducto(rfid).subscribe(
       data => {
-        this.toastr.success('El producto fue registrado con exito!', 'Producto Registrado');
+        console.log('Respuesta del servidor:', data);
+        this.toastr.success('El RFID fue registrado con éxito!', 'RFID Registrado');
         this.router.navigate(['/']);
       },
       error => {
-        console.error(error);
+        console.error('Error en la solicitud:', error);
         this.RFIDForm.reset();
       }
     );
+  } else {
+    this.toastr.error('Por favor complete todos los campos requeridos.', 'Error de Validación');
   }
+}
+
 
   esEditar() {
-
+    // Agrega aquí el código necesario si estás editando un RFID existente.
   }
-
 }

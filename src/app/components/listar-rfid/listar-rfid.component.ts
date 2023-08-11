@@ -28,4 +28,14 @@ export class ListarRfidComponent implements OnInit {
     );
   }
 
+
+  eliminarRegistro(rfid: any) {
+
+    const index = this.listaRFID.indexOf(rfid);
+    if (index !== -1) {
+      this.listaRFID.splice(index, 1);
+    }
+  }
+
 }
+

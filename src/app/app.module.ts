@@ -17,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CrearRfidComponent } from './components/crear-rfid/crear-rfid.component';
 import { ListarRfidComponent } from './components/listar-rfid/listar-rfid.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule, ToastrService } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +25,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListarRfidComponent,
 
   ],
-  imports: [BrowserModule,ReactiveFormsModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,
+  imports: [BrowserModule,ToastrModule.forRoot(),ReactiveFormsModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,
   AngularFireModule, AngularFireAuthModule, AngularFireModule.initializeApp(environment.firebaseConfig)],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy ,useClass: IonicRouteStrategy,  }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -15,7 +15,7 @@ export class RFIDService {
     return this.http.get<RFID[]>(this.url);
   }
 
-  GuardarProducto(RFID: RFID): Observable <any> {
+  GuardarProducto(RFID: {}): Observable <any> {
     return this.http.post(this.url, RFID)
   }
 

@@ -16,6 +16,14 @@ const RFIDSchema = mongoose.Schema({
     fechaCreacion: {
         type: Date,
         default: Date.now()
+    },
+    NumeroT: {
+        type: Number,
+        required: true
+    },
+    NombrePExterna: {
+        type: String,
+        required: true
     }
 });
 

@@ -59,10 +59,7 @@ const routes: Routes = [
     path: 'salidas',
     loadChildren: () => import('./salidas/salidas.module').then( m => m.SalidasPageModule)
   },
-  {
-    path: 'tarjeta-rfid',
-    loadChildren: () => import('./tarjeta-rfid/tarjeta-rfid.module').then( m => m.TarjetaRFIDPageModule)
-  },
+
   {
     path: 'documentos',
     loadChildren: () => import('./documentos/documentos.module').then( m => m.DocumentosPageModule)

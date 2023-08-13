@@ -18,7 +18,7 @@
   <ion-card>
       <ion-card-header>
         <ion-card-title>Niños</ion-card-title>
-        <ion-card-title class="centered-title">Salon</ion-card-title>
+        <ion-card-title class="centered-title">Salón</ion-card-title>
       </ion-card-header>    
     <ion-card-content *ngIf="listaRFID.length > 0">
       <ion-list *ngFor="let rfid of listaRFID">
@@ -26,7 +26,7 @@
           <ion-label>{{ rfid.NombreNino }}</ion-label>
           <ion-label>{{ rfid.Salon }}</ion-label>
           <ion-buttons slot="end">
-            <ion-button color="danger" (click)="eliminarRegistro(rfid)">
+            <ion-button color="danger" (click)="eliminarRegistro(id)">
               <ion-icon name="trash"></ion-icon>
             </ion-button>
             <ion-button color="primary" (click)="editarRegistro(rfid)">
@@ -37,11 +37,13 @@
       </ion-list>
     </ion-card-content>
   </ion-card>
+  <div class="coso">
   <button class="uno" color="gris" [routerLink]="['/documentos']">
     <ion-icon class="person" name="person-circle-outline"></ion-icon>Registrar Usuario
   </button>
   <button class="uno" color="gris" [routerLink]="['/crear-rfid']">
-    <ion-icon class="person" name="person-circle-outline"></ion-icon>Registrar RFID
+    <ion-icon class="person" name="person-circle-outline"></ion-icon>Registrar Niño
   </button>
+</div>
   
 </ion-content>

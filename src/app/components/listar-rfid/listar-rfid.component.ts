@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { error } from 'console';
+import { ToastrService } from 'ngx-toastr';
 import { RFID } from 'src/app/models/RFID';
 import { RFIDService } from 'src/app/services/rfid.service';
 
@@ -10,8 +12,9 @@ import { RFIDService } from 'src/app/services/rfid.service';
 export class ListarRfidComponent implements OnInit {
   listaRFID: RFID[] = [];
 
-  constructor(private _rfidService: RFIDService) { }
-
+  constructor(private _rfidService: RFIDService,
+    private toastr: ToastrService) { }
+        
   ngOnInit(): void {
     this.obtenerRFID();
   }
@@ -30,12 +33,12 @@ export class ListarRfidComponent implements OnInit {
 
 
   eliminarRegistro(rfid: any) {
-
-    const index = this.listaRFID.indexOf(rfid);
-    if (index !== -1) {
-      this.listaRFID.splice(index, 1);
-    }
+    this._rfidService.eliminarRegistro('id').subscribe(data =>{ 
+      this.toastr.error('El RFID fue eliminado', 'RFID Eliminado');
+      this.obtenerRFID();
+    }, error => {
+      console.log(error);
+    })
   }
-
 }
 

@@ -1,5 +1,5 @@
 ion-toolbar{
-    background: #A9F9AA;
+    background:  #2eeb9b ;
 }
 ion-content{
     --background:#ececec;
@@ -7,27 +7,25 @@ ion-content{
     margin-bottom: auto;
 }
 .uno{
-    background:#8f8e8e ;
-    color: white;
-    margin-left: 580px;
-    padding: 15px 35px;
+    background: #5dade2;
+    min-height: 50px;
+    width: 20%;
+    color: black;
     border-radius: 15px;
     font-size: 15px;
-    margin-top: auto;
-    display: flex;
-    align-items: center;
+    margin-right: 20px;
+
+  align-items: center;
 }
 .dos{
     background:#8f8e8e ;
     color: white;
-    margin-left: 580px;
-    padding: 15px 35px;
     border-radius: 15px;
     font-size: 15px;
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
 
+}
+.coso{
+   text-align: center;
 }
 
 @media (max-width: 800px) {
@@ -35,7 +33,6 @@ ion-content{
  
         color: white;
         margin-left: 20%;
-    
     }
     .dos{
  

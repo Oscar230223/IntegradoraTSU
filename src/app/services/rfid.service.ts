@@ -19,8 +19,4 @@ export class RFIDService {
     return this.http.post(this.url, RFID)
   }
 
-  eliminarRegistro(id: string): Observable<any> {
-    return this.http.delete(this.url + id);
-  }
-
 }

@@ -7,68 +7,15 @@
     <ion-title>Salidas</ion-title>
   </ion-toolbar>
   <br/>
-  <ion-datetime></ion-datetime>
 </ion-header>
+<ion-card>
+  <ion-card-title class="centered-title">Entrada y Salida</ion-card-title>
+  <ion-card-content *ngIf="listaRFID.length > 0">
+    <ion-list *ngFor="let rfid of listaRFID">
+      <ion-item>
+        <ion-label>{{ rfid.fechaCreacion }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+</ion-card>
 
-
-<ion-list>
-  <ion-item>
-    <ion-label>
-      <ion-datetime-button datetime="datetime"></ion-datetime-button>
-      <ion-list [inset]="true">
-        <ion-item>
-          <ion-label>
-            <ion-datetime-button datetime="datetime"></ion-datetime-button>
-
-<ion-modal [keepContentsMounted]="true">
-  <ng-template>
-    <ion-datetime id="datetime"></ion-datetime>
-  </ng-template>
-</ion-modal>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>
-            <ion-datetime-button datetime="datetime"></ion-datetime-button>
-
-<ion-modal [keepContentsMounted]="true">
-  <ng-template>
-    <ion-datetime id="datetime"></ion-datetime>
-  </ng-template>
-</ion-modal>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>
-            <ion-datetime-button datetime="datetime"></ion-datetime-button>
-
-<ion-modal [keepContentsMounted]="true">
-  <ng-template>
-    <ion-datetime id="datetime"></ion-datetime>
-  </ng-template>
-</ion-modal>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>
-            <ion-datetime-button datetime="datetime"></ion-datetime-button>
-
-<ion-modal [keepContentsMounted]="true">
-  <ng-template>
-    <ion-datetime id="datetime"></ion-datetime>
-  </ng-template>
-</ion-modal>
-          </ion-label>
-        </ion-item>
-        <ion-item>
-          <ion-label>
-            <ion-datetime-button datetime="datetime"></ion-datetime-button>
-
-<ion-modal [keepContentsMounted]="true">
-  <ng-template>
-    <ion-datetime id="datetime"></ion-datetime>
-  </ng-template>
-</ion-modal>
-          </ion-label>
-        </ion-item>
-      </ion-list>

@@ -19,4 +19,10 @@ export class RFIDService {
     return this.http.post(this.url, RFID)
   }
 
+  ObtenerRFID(id: string): Observable<any> {
+    return this.http.get(this.url + id)
+  }
+  EditarRFID(id: string, rfid: RFID): Observable <any> {
+    return this.http.put(this.url + id, rfid);
+  }
 }

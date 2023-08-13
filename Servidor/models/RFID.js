@@ -24,6 +24,10 @@ const RFIDSchema = mongoose.Schema({
     NombrePExterna: {
         type: String,
         required: false
+    },
+    Estado: {
+        type: String,
+        required: false
     }
 });
 

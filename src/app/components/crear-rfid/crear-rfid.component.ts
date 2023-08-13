@@ -23,9 +23,12 @@ export class CrearRfidComponent implements OnInit {
     private aRouter: ActivatedRoute
   ) {
     this.RFIDForm = this.fb.group({
-      NombreNiño: ['', Validators.required],
+      Nino: ['', Validators.required],
       Salon: ['', Validators.required],
-      NombrePadre: ['', Validators.required],
+      Padre: ['', Validators.required],
+      NumeroT: ['', Validators.required],
+      NombrePExterna: ['', Validators.required],
+      Estado: ['', Validators.required]
     });
     this.id = this.aRouter.snapshot.paramMap.get('id');
   }
@@ -34,14 +37,23 @@ export class CrearRfidComponent implements OnInit {
     this.esEditar();
   }
 
-agregarRFID(nameKid:any, classroom:any, nameDad:any) {
+agregarRFID(Nino:any, Salon:any, Padre:any, NumeroT:any, NombrePExterna: any, Estado: any) {
   if (this.RFIDForm.valid) {
     console.log('Formulario válido:', this.RFIDForm.value);
     let rfid = {
-      NombreNino: nameKid.value,
-      Salon: classroom.value,
-      NombrePadre: nameDad.value
-    };
+      NombreNino: Nino.value,
+      Salon: Salon.value,
+      NombrePadre: Padre.value,
+      NumeroT: NumeroT.value,
+      NombrePExterna: NombrePExterna.value,
+      Estado: Estado.value
+    }
+
+    if(this.id !== null){
+
+    }else{
+      
+    }
 
     console.log('Datos a enviar:', rfid);
     this._RFIDService.GuardarProducto(rfid).subscribe(
@@ -62,6 +74,18 @@ agregarRFID(nameKid:any, classroom:any, nameDad:any) {
 
 
   esEditar() {
-    // Agrega aquí el código necesario si estás editando un RFID existente.
+
+    if(this.id !== null) {
+      this._RFIDService.ObtenerRFID(this.id).subscribe(data => {
+        this.RFIDForm.setValue({
+          Nino: data.NombreNino,
+          Salon: data.Salon,
+          Padre: data.NombrePadre,
+          NumeroT: data.NumeroT,
+          NombrePExterna: data.NombrePExterna,
+          Estado: data.Estado
+        })
+      })
+    }
   }
 }

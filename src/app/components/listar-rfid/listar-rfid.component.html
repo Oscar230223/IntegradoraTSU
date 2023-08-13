@@ -25,11 +25,10 @@
         <ion-item>
           <ion-label>{{ rfid.NombreNino }}</ion-label>
           <ion-label>{{ rfid.Salon }}</ion-label>
-          <ion-buttons slot="end">
-            <ion-button color="danger" (click)="eliminarRegistro(rfid)">
-              <ion-icon name="trash"></ion-icon>
-            </ion-button>
-            <ion-button color="primary" (click)="editarRegistro(rfid)">
+          <ion-label>{{ rfid.fechaCreacion }}</ion-label>
+          <ion-label>{{ rfid.Estado }}</ion-label>
+          <ion-buttons>
+            <ion-button [routerLink]= "['/editar-rfid', rfid._id ]" color="primary" (click)="editarRegistro(rfid)">
               <ion-icon name="create"></ion-icon>
             </ion-button>
           </ion-buttons>

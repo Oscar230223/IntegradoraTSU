@@ -36,6 +36,22 @@ const RFIDSchema = mongoose.Schema({
     CURP: {
         type: String,
         required: true
+    },
+    uid: {
+        type: String,
+        required: false
+    },
+    estado: {
+        type: String,
+        required: false
+    },
+    hora_entrada: {
+        type: String,
+        required: false
+    },
+    hora_salida: {
+        type: String,
+        required: false
     }
 });
 

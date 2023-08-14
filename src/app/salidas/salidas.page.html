@@ -13,7 +13,7 @@
   <ion-card-content *ngIf="listaRFID.length > 0">
     <ion-list *ngFor="let rfid of listaRFID">
       <ion-item>
-        <ion-label class="verde">{{ rfid.fechaCreacion }}</ion-label> <ion-label class="rojo">{{ rfid.fechaCreacion }}</ion-label>
+        <ion-label class="verde">{{ rfid.hora_entrada }}</ion-label> <ion-label class="rojo">{{ rfid.hora_salida }}</ion-label>
       </ion-item>
     </ion-list>
   </ion-card-content>

@@ -18,21 +18,12 @@
   <ion-card>
       <ion-card-header>
         <ion-card-title>Niños</ion-card-title>
-        <ion-card-title class="centered-title">Salón</ion-card-title>
       </ion-card-header>    
     <ion-card-content *ngIf="listaRFID.length > 0">
       <ion-list *ngFor="let rfid of listaRFID">
         <ion-item>
-          <ion-label>{{ rfid.NombreNino }}</ion-label>
-          <ion-label>{{ rfid.Salon }}</ion-label>
-          <ion-buttons slot="end">
-            <ion-button color="danger" (click)="EliminarRFID(rfid._id)">
-              <ion-icon name="trash"></ion-icon>
-            </ion-button>
-            <ion-button [routerLink]= "['/editar-rfid', rfid._id ]" color="primary" (click)="editarRegistro(rfid)">
-              <ion-icon name="create"></ion-icon>
-            </ion-button>
-          </ion-buttons>
+          <ion-label>Nombre del Niño: {{ rfid.NombreNino }}</ion-label>
+          <ion-label>Salon: {{ rfid.Salon }}</ion-label>
         </ion-item>
       </ion-list>
     </ion-card-content>

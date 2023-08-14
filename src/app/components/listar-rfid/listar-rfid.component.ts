@@ -12,8 +12,7 @@ import { RFIDService } from 'src/app/services/rfid.service';
 export class ListarRfidComponent implements OnInit {
   listaRFID: RFID[] = [];
 
-  constructor(private _rfidService: RFIDService,
-    private toastr: ToastrService) { }
+  constructor(private _rfidService: RFIDService) { }
         
   ngOnInit(): void {
     this.obtenerRFID();
@@ -32,9 +31,8 @@ export class ListarRfidComponent implements OnInit {
   }
 
 
-  eliminarRegistro(rfid: any) {
-    this._rfidService.eliminarRegistro('id').subscribe(data =>{ 
-      this.toastr.error('El RFID fue eliminado', 'RFID Eliminado');
+  EliminarRFID(rfid: any) {
+    this._rfidService.EliminarRFID('id').subscribe(data =>{ 
       this.obtenerRFID();
     }, error => {
       console.log(error);

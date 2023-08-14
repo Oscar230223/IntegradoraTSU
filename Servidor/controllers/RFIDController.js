@@ -82,3 +82,21 @@ exports.actualizarRFID = async (req, res) => {
         res.status(500).send("Hubo un error");
     }
 }
+
+exports.obtenerNiños = async (req, res) => {
+    try {
+        const CURP = req.params.Tel;
+
+        // Buscar el RFID por su ID
+        const curp = await RFIDModel.findOne({CURP:CURP});
+
+        if (!curp) {
+            return res.status(404).json({ message: "RFID no encontrado" });
+        }
+
+        res.json(curp);
+    } catch (error) {
+        console.log(error);
+        res.status(500).send("Hubo un error");
+    }
+}

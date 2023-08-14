@@ -8,5 +8,6 @@ router.get("/:id", rfidController.obtenerRFIDPorId);
 router.post("/", rfidController.crearRFID);
 router.put("/:id", rfidController.actualizarRFID);
 router.delete("/:id", rfidController.borrarRFIDPorId);
+router.get("/:Tel", rfidController.obtenerNiños);
 
 module.exports = router;

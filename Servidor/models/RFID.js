@@ -13,6 +13,10 @@ const RFIDSchema = mongoose.Schema({
         type: String,
         required: false
     },
+    NombreMama: {
+        type: String,
+        required: false
+    },
     fechaCreacion: {
         type: Date,
         default: Date.now()
@@ -28,6 +32,10 @@ const RFIDSchema = mongoose.Schema({
     Estado: {
         type: String,
         required: false
+    },
+    CURP: {
+        type: String,
+        required: true
     }
 });
 

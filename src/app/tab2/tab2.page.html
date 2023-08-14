@@ -7,25 +7,26 @@
   </ion-toolbar>
 </ion-header>
 
-  <ion-content>
-  <ion-card>
-    <ion-card-header color="verde" class="uno">
-      <ion-card-title color="negro" class="uno1">Ingresé:</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <br />
-      <ion-input label="Nombre de la persona" label-placement="floating" fill="outline" placeholder="Ingresé nombre de la persona"></ion-input>
-      <br />
-      <ion-input label="Nombre del niño" label-placement="floating" fill="outline" placeholder="Ingresé nombre del niño"></ion-input>
-      <br />
-      <ion-input label="Nombre del padre" label-placement="floating" fill="outline" placeholder="Ingresé nombre del padre"></ion-input>
-      <br />
-      <ion-input label="Teléfono" label-placement="floating" fill="outline" placeholder="Ingresé teléfono"></ion-input>
-      <br />
-      <ion-input label="Salón" label-placement="floating" fill="outline" placeholder="Ingresé salón"></ion-input>
-      <br />
-   
-    
-    <ion-icon class="qr" name="qr-code-outline" [routerLink]="['/info-qr']"></ion-icon> </ion-card-content>
-   </ion-card>
-</ion-content>
+<ion-card-content *ngIf="listaRFID.length > 0">
+  <ion-list *ngFor="let rfid of listaRFID">
+    <ion-item>
+      <ion-label><strong style="text-align: center;">Nombre del Niño: {{ rfid.NombreNino }}</strong></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><strong style="text-align: center;">Salon: {{ rfid.Salon }}</strong></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><strong style="text-align: center;">Nombre del Padre: {{ rfid.NombrePadre }}</strong></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><strong style="text-align: center;">Nombre de la Madre: {{ rfid.NombreMama }}</strong></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><strong style="text-align: center;">Numero de Telefono: {{ rfid.NumeroT }}</strong></ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label><strong style="text-align: center;">Nombre de la Persona Externa: {{ rfid.NombrePExterna }}</strong></ion-label>
+    </ion-item>
+  </ion-list>
+</ion-card-content>
+

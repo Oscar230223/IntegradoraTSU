@@ -18,5 +18,14 @@ export class RFIDService {
   GuardarProducto(RFID: {}): Observable <any> {
     return this.http.post(this.url, RFID)
   }
+  ObtenerRFID(id: string): Observable<any> {
+    return this.http.get(this.url + id)
+  }
 
+  EliminarRFID(id: string): Observable<any> {
+    return this.http.delete(this.url + id);
+  }
+  EditarRFID(id: string, rfid: RFID): Observable <any> {
+    return this.http.put(this.url + id, rfid);
+  }
 }

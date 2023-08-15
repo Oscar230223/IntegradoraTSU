@@ -1,9 +1,10 @@
-ion-toolbar{
-    background: #A9F9AA;
+.inicio{
+    background: #2eeb9b;
+    text-align: center;
 }
 .btn{
-    background-color: #8f8e8e;
-    color: white;
+    background-color: #5dade2;
+    color: black;
     padding: 20px 30px;
     border-radius: 15px;
     font-size: 15px;
@@ -18,44 +19,54 @@ ion-content{
     
 }
 .person{
-    margin-left: 630px;
     width: 100px;
     font-size: 500%;
+    color: black;
+}
+.segundo{
+    background: #1fa56d;
 }
 ion-title{
     margin-left: auto;
+    color: black;
+}
+.boton{
+    text-align: center
+}
+.icon{
+    text-align: center;
 }
 
 @media (max-width: 800px) {
-    ion-toolbar{
-        background: #A9F9AA;
-    }
+
     
     .btn{
-        background-color:#8f8e8e;
-        color: white;
+        background-color:#5dade2;
+        color: black;
         border-radius: 15px;
         font-size: auto;
-        margin-left: 25%;
     }
   
     .person{
-        margin-left: 35%;
         width: 100px;
     }
     ion-title{
         margin-left: 35px;
     }
-    ion-content{
-        --background: #ececec;
-        margin-top: auto;
-        margin-bottom: auto;
-        
-    }
+
 }
 .contra{
     width: 40px;
+    color: black;
 }
 .email{
     width: 40px;
+    color: black;
+}
+.tortuga{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 10px;
+
 }

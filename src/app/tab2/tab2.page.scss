@@ -1,21 +1,29 @@
 ion-toolbar{
-    background: #A9F9AA;
+    background: #2eeb9b;
 }
-.bt{
+.btn{
+    background-color: #5dade2;
     color: black;
     padding: 15px 30px;
     border-radius: 15px;
     font-size: 15px;
-    margin-left: 620px;
+
     width: 50px;
-    height: 50px;
+    height: 50px; 
+    text-align: center;
 }
+.boton{
+    text-align: center;
+}
+
 .qr{
     width: 50px;
     height: 50px;
-    margin-left: 620px;
     color: black;
     cursor: pointer;
+}
+.two{
+    text-align: center;
 }
 ion-content{
     --background:#ececec;
@@ -24,25 +32,26 @@ ion-content{
     
 }
 @media (max-width: 800px) {
-    ion-content{
-        --background:#ececec;
-        margin-top: auto;
-        margin-bottom: auto;
-        
-    }
     .qr{
         width: 50px;
         height: 50px;
         color: black;
         cursor: pointer;
-        margin-left: 45%;
-        margin-top: 5px;
+        text-align: center;
+    }
+    .two{
+        text-align: center;
+    }
+    .btn{
+        width: 40%;
+        height: 35%;
     }
  
 }
 .uno{
-    background-color: #C8E4B2;
+    background-color: #1fa56d;
 }
+
 ion-card-title.uno1{
     color: black;
     font-size: 20px;

@@ -1,16 +1,21 @@
 <ion-header>
   <ion-toolbar color="login" class="inicio">
-    <ion-title>Inicio de sesión</ion-title>
+    <img class="tortuga" src="https://i.pinimg.com/736x/aa/df/11/aadf1195423b2e96c376de0b6a1a8f17.jpg" alt="tortuga">
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
     <ion-card-header>
-      <ion-icon class="person" name="person-circle" color="login"></ion-icon>
+      <ion-toolbar class="segundo" color="login" >
+        <ion-title size="large">Inicio de sesión</ion-title> 
+    </ion-toolbar>
     </ion-card-header>
     <ion-card-content>
       <form [formGroup]="formularioLogin">
+        <div class="icon">
+        <ion-icon class="person" name="person-circle"></ion-icon>
+        </div>
         <ion-item>
         <ion-input label="Correo" formControlName="email" label-placement="floating"></ion-input>
         <ion-icon class="email" name="mail-outline"></ion-icon> 
@@ -22,9 +27,10 @@
       </ion-item> 
       </form>
       <br>
+      <div class="boton" >
       <button class="btn" id="open-loading" (click)="login()" >Iniciar Sesión</button>
       <ion-loading trigger="open-loading" message="Iniciando, por favor espere..." duration="3000"></ion-loading>
-
+    </div>
 
     </ion-card-content>
   </ion-card>

@@ -31,6 +31,7 @@ export class ListarRfidComponent implements OnInit {
   }
 
 
+<<<<<<< Updated upstream
   EliminarRFID(rfid: any) {
     this._rfidService.EliminarRFID('id').subscribe(data =>{ 
       this.obtenerRFID();
@@ -38,5 +39,8 @@ export class ListarRfidComponent implements OnInit {
       console.log(error);
     })
   }
+=======
+
+>>>>>>> Stashed changes
 }
 

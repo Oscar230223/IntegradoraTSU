@@ -1,15 +1,17 @@
 <ion-header [translucent]="true">
-  <ion-toolbar class="verde" color="verde">
+  <ion-toolbar class="verde" color="negro">
     <ion-buttons slot="start">
       <ion-back-button icon="arrow-back" defaultHref="arrow">
       </ion-back-button>
     </ion-buttons>
-    <ion-title>Salidas</ion-title>
   </ion-toolbar>
-  <br/>
 </ion-header>
+
+<ion-content>
 <ion-card>
-  <ion-card-title class="centered-title">Entrada y Salida</ion-card-title>
+  <ion-card-header class="header">
+    <ion-card-title class="title">Entradas y Salidas</ion-card-title>
+  </ion-card-header>
   <ion-card-content *ngIf="listaRFID.length > 0">
     <ion-list *ngFor="let rfid of listaRFID">
       <ion-item>
@@ -18,3 +20,4 @@
     </ion-list>
   </ion-card-content>
 </ion-card>
+</ion-content>

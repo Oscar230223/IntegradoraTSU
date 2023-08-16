@@ -2,6 +2,7 @@
   <ion-toolbar class="verde" color="inicio">
     <ion-buttons slot="start">
     </ion-buttons>
+    <ion-icon class="log" name="log-out-outline" [routerLink]="['/login']"></ion-icon>
   </ion-toolbar>
 </ion-header>
 <style>
@@ -16,8 +17,8 @@
     </ion-toolbar>
   </ion-header>
   <ion-card>
-      <ion-card-header>
-        <ion-card-title>Niños</ion-card-title>
+      <ion-card-header class="header">
+        <ion-card-title class="title">Niños</ion-card-title>
       </ion-card-header>    
     <ion-card-content *ngIf="listaRFID.length > 0">
       <ion-list *ngFor="let rfid of listaRFID">

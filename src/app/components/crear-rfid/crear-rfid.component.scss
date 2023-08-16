@@ -3,6 +3,16 @@ ion-toolbar{
 }
 ion-content{
     --background:#ececec;
-    margin-top: auto;
-    margin-bottom: auto;
+}
+.boton{
+    text-align: center;
+}
+.btn{
+    background: #5dade2;
+    min-height: 40px;
+    width: 10%;
+    color: black;
+    border-radius: 15px;
+    font-size: 15px;
+    margin-right: 20px;
 }

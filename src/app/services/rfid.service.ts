@@ -8,6 +8,7 @@ import { RFID } from '../models/RFID';
 })
 export class RFIDService {
   url = 'http://localhost:4000/api/RFID';
+  kid = 'http://localhost:4000/api/RFID/kid/';
 
   constructor(private http: HttpClient) { }
 
@@ -27,5 +28,8 @@ export class RFIDService {
   }
   EditarRFID(id: string, rfid: RFID): Observable <any> {
     return this.http.put(this.url + id, rfid);
+  }
+  obtenerKid(curp:String){
+    return this.http.get(this.kid + curp);
   }
 }

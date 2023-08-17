@@ -65,6 +65,7 @@ agregarRFID(Nino:any, Salon:any, Padre:any, NumeroT:any, NombrePExterna: any, Es
         console.log('Respuesta del servidor:', data);
         this.toastr.success('El RFID fue registrado con éxito!', 'RFID Registrado');
         this.router.navigate(['/']);
+  
       },
       error => {
         console.error('Error en la solicitud:', error);

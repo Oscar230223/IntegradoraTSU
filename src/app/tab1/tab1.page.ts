@@ -8,8 +8,9 @@ import { RFIDService } from 'src/app/services/rfid.service';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page implements OnInit{
+  curpInput: string = '';
   listaRFID: RFID[] = [];
-
+  kid = {}
   constructor(private _rfidService: RFIDService) { }
 
   ngOnInit(): void {
@@ -28,4 +29,34 @@ export class Tab1Page implements OnInit{
     );
   }
 
-}
+  buscarPorCurp() {
+    if (this.curpInput) {
+      this._rfidService.obtenerKid(this.curpInput).subscribe(
+        data => {
+          console.log(data);
+          this.kid = data;
+        }, 
+        error => {
+          console.log(error);
+          this.kid = null; // Restablece los datos si hay un error
+        }
+      );
+    } else {
+      this.kid = null; // Restablece los datos si no se ha ingresado CURP
+    }
+  }
+
+  obtenersKid(CURP: string){
+    const curp = 'curp';
+    this._rfidService.obtenerKid(curp).subscribe(
+      data => {
+        console.log(data);
+        this.kid = data;
+      }, 
+      error => {
+        console.log(error);
+      }
+    );
+  }
+}  
+

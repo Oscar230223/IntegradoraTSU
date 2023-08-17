@@ -1,11 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="rosa">
-    <ion-buttons slot="start">
-      <ion-back-button icon="arrow-back" defaultHref="arrow">
+    <ion-buttons slot="start" >
+      <ion-back-button icon="arrow-back" defaultHref="arrow" [routerLink]="['/tab1']">
       </ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 <ion-content class="content-container">
   <ion-searchbar [(ngModel)]="curpInput" (ionInput)="buscarPorCurp()"></ion-searchbar>
   <ion-header collapse="condense">
@@ -44,40 +45,5 @@
     </ion-card>
   </ion-card>
 </ion-content>
-<ion-card-content *ngIf="listaRFID.length > 0">
-  <ion-list *ngFor="let rfid of listaRFID">
-    <ion-item>
-      <ion-label>
-        <h1>Nombre del Niño</h1>
-        <p>{{ rfid.NombreNino }}</p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>
-        <h1>Salon</h1>
-        <p>{{ rfid.Salon }}</p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>
-        <h1>Nombre de la Madre</h1>
-        <p>{{ rfid.NombreMama }}</p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>
-        <h1>Numero de Telefono</h1>
-        <p>{{ rfid.NumeroT }}</p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>
-        <h1>Nombre de la Persona Externa</h1>
-        <p>{{ rfid.NombrePExterna }}</p>
-      </ion-label>
-    </ion-item>
-    <ion-item>
-    </ion-item>
-  </ion-list>
-</ion-card-content>
+
 

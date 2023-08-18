@@ -8,6 +8,7 @@
 </ion-header>
 
 <ion-content>
+  <ion-searchbar [(ngModel)]="curpInput" (ionInput)="buscarPorCurp()"></ion-searchbar>
 <ion-card>
   <ion-card-header class="header">
     <ion-card-title class="title">Entradas y Salidas</ion-card-title>
@@ -15,7 +16,7 @@
   <ion-card-content *ngIf="listaRFID.length > 0">
     <ion-list *ngFor="let rfid of listaRFID">
       <ion-item>
-        <ion-label class="verde">{{ rfid.hora_entrada }}</ion-label> <ion-label class="rojo">{{ rfid.hora_salida }}</ion-label><ion-label>{{ rfid.uid}}</ion-label>
+        <ion-label class="verde">{{ kid.hora_entrada }}</ion-label> <ion-label class="rojo">{{ kid.hora_salida }}</ion-label><ion-label>{{ kid.uid}}</ion-label>
       </ion-item>
     </ion-list>
   </ion-card-content>

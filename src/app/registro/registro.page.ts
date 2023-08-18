@@ -19,7 +19,8 @@ export class RegistroPage implements OnInit {
 
   ngOnInit() {
     
-
+//Se manda a llamar lo que es formulario de html para el registro
+//Validaciones para el email y para la contraseña (Que es lo que requerimos)
     this.formularioRegistro = this.formBuilder.group({
       email :['',[
         Validators.required,
@@ -29,6 +30,9 @@ export class RegistroPage implements OnInit {
        Validators.required]
     })
   }
+
+  //Para autenticar los campos del registro, solamente tenemos dos campos
+  //Si valida la autenticacion mandara a la pestaña anterior de la pestaña registro
   get errorControl(){
     return this.formularioRegistro?.controls;
   }

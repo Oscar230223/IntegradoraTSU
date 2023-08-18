@@ -12,37 +12,31 @@
     <ion-list>
       <form [formGroup]="RFIDForm">
         <ion-item class="form-item">
-          <ion-label class="form-label" position="stacked">Nombre del niño</ion-label>
-          <ion-input #Nino class="form-input" formControlName="Nino"></ion-input>
+          <ion-input #Nino class="form-input" formControlName="Nino"placeholder="Nombre del niño"></ion-input>
         </ion-item>
         <ion-item class="form-item">
-          <ion-label class="form-label" position="stacked">Salón</ion-label>
-          <ion-input #Salon class="form-input" formControlName="Salon"></ion-input>
+          <ion-input #Salon class="form-input" formControlName="Salon" placeholder="Salón"></ion-input>
         </ion-item>
         <ion-item class="form-item">
-          <ion-label class="form-label" position="stacked">Nombre del Padre</ion-label>
-          <ion-input #Padre class="form-input" formControlName="Padre"></ion-input>
+          <ion-input #Padre class="form-input" formControlName="Padre" placeholder="Nombre del padre"></ion-input>
         </ion-item>
         <ion-item class="form-item">
-          <ion-label class="form-label" position="stacked">Teléfono</ion-label>
-          <ion-input #NumeroT class="form-input" formControlName="NumeroT"></ion-input>
+          <ion-input #NumeroT class="form-input" formControlName="NumeroT" placeholder="Teléfono"></ion-input>
         </ion-item>
         <ion-item class="form-item">
-          <ion-label class="form-label" position="stacked">Nombre de la Persona Externa</ion-label>
-          <ion-input #NombrePExterna class="form-input" formControlName="NombrePExterna"></ion-input>
+          <ion-input #NombrePExterna class="form-input" formControlName="NombrePExterna" placeholder="Nombre de la persona externa"></ion-input>
         </ion-item>
         <ion-item class="form-item">
-          <ion-label class="form-label" position="stacked">CURP Papá/Mamá</ion-label>
-          <ion-input #CURP class="form-input" formControlName="CURP"></ion-input>
+          <ion-input #CURP class="form-input" formControlName="CURP" placeholder="CURP (Papá/Mamá)"></ion-input>
         </ion-item>
         <ion-item class="form-item">
-          <ion-label class="form-label" position="stacked">Nombre Mamá</ion-label>
-          <ion-input #Mama class="form-input" formControlName="Mama"></ion-input>
+          <ion-input #Mama class="form-input" formControlName="Mama" placeholder="Nombre de la Madre"></ion-input>
         </ion-item>
       </form>
     </ion-list>
   </ion-card>
-  <button type="button" class="btn" (click)="agregarRFID(Nino, Salon, Padre, NumeroT, NombrePExterna,Estado, CURP, Mama)" id="open-loading" [routerLink]="['/listar-rfid']">Crear</button>
+  <div class="boton">
+  <button type="button" class="btn" (click)="agregarRFID(Nino, Salon, Padre, NumeroT, NombrePExterna, CURP, Mama)" id="open-loading" [routerLink]="['/listar-rfid']">Crear</button>
   <ion-loading trigger="open-loading" message="Generando tarjeta RFID, por favor espere..." duration="3000"></ion-loading>
   </div>
 </ion-content>

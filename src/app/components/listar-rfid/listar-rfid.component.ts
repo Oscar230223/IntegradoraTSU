@@ -9,6 +9,8 @@ import { RFIDService } from 'src/app/services/rfid.service';
   templateUrl: './listar-rfid.component.html',
   styleUrls: ['./listar-rfid.component.scss'],
 })
+
+//SE toman los datos del modelo RFID, se utiliza el nombre y el salon para la ventana admin
 export class ListarRfidComponent implements OnInit {
   listaRFID: RFID[] = [];
 

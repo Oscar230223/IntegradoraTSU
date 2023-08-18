@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar class="verde" color="inicio">
+  <ion-toolbar color="inicio">
     <ion-buttons slot="start">
     </ion-buttons>
     <ion-icon class="log" name="log-out-outline" [routerLink]="['/login']"></ion-icon>
@@ -24,7 +24,7 @@
       <ion-list *ngFor="let rfid of listaRFID">
         <ion-item>
           <ion-label>Nombre del Niño: {{ rfid.NombreNino }}</ion-label>
-          <ion-label>Salon: {{ rfid.Salon }}</ion-label>
+          <ion-label>Salón: {{ rfid.Salon }}</ion-label>
         </ion-item>
       </ion-list>
     </ion-card-content>

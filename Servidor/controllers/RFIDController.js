@@ -1,3 +1,4 @@
+//Se mandan los datos a la base de datos
 const RFIDModel = require("../models/RFID");
 
 exports.crearRFID = async (req, res) => {

@@ -1,3 +1,4 @@
+//Declara las rutas de los controladores
 const express = require("express");
 const router = express.Router();
 const rfidController = require("../controllers/RFIDController"); // Asegúrate de importar tus controladores correctamente

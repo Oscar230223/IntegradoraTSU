@@ -17,13 +17,7 @@ ion-content{
 
   align-items: center;
 }
-.dos{
-    background:#8f8e8e ;
-    color: white;
-    border-radius: 15px;
-    font-size: 15px;
 
-}
 .coso{
    text-align: center;
 }
@@ -31,15 +25,13 @@ ion-content{
 @media (max-width: 800px) {
     .uno{
  
-        color: white;
-        margin-left: 20%;
+        color: black;
+        margin-right: 20px;
+        width: 50%;
+        margin-top: 15px;
     }
-    .dos{
- 
-        color: white;
-        margin-left: 20%;
-    
-    }
+
+   
 }
 .header{
     background: #1fa56d;

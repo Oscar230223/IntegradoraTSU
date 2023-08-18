@@ -1,3 +1,4 @@
+//Se declara el tipo de dato que va a tener
 const mongoose = require('mongoose');
 
 const RFIDSchema = mongoose.Schema({

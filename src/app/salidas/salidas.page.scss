@@ -11,6 +11,7 @@ ion-datetime{
 }
 .verde {
     color: green;
+    
   }
   
   .rojo {
@@ -23,3 +24,13 @@ ion-datetime{
 .title{
     color: black;
 }
+.lista{
+    text-align: center;
+}
+
+.lista ion-item.fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

@@ -46,6 +46,10 @@
       </form>
     </ion-list>
   </ion-card>
-  <button type="button" class="btn" (click)="agregarRFID(Nino, Salon, Padre, NumeroT, NombrePExterna,Estado, CURP, Mama)" id="open-loading" [routerLink]="['/listar-rfid']">Crear</button>
+  <div class="boton">
+  <button type="button" class="btn" (click)="agregarRFID(Nino, Salon, Padre, NumeroT, NombrePExterna,Estado, CURP, Mama)" id="open-loading" [routerLink]="['/listar-rfid']">
+    <ion-icon name="add-circle-outline"></ion-icon>Crear</button>
+  
   <ion-loading trigger="open-loading" message="Generando tarjeta RFID, por favor espere..." duration="3000"></ion-loading>
+  </div>
 </ion-content>

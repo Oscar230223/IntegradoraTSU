@@ -10,6 +10,8 @@ import { RFIDService } from 'src/app/services/rfid.service';
   templateUrl: './crear-rfid.component.html',
   styleUrls: ['./crear-rfid.component.scss'],
 })
+
+//Se declaran los datos del formulario
 export class CrearRfidComponent implements OnInit {
   RFIDForm: FormGroup;
   titulo = 'Crear RFID';

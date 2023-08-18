@@ -32,10 +32,6 @@
           <ion-input #NombrePExterna class="form-input" formControlName="NombrePExterna"></ion-input>
         </ion-item>
         <ion-item class="form-item">
-          <ion-label class="form-label" position="stacked">Activo/Inactivo</ion-label>
-          <ion-input #Estado class="form-input" formControlName="Estado"></ion-input>
-        </ion-item>
-        <ion-item class="form-item">
           <ion-label class="form-label" position="stacked">CURP Papá/Mamá</ion-label>
           <ion-input #CURP class="form-input" formControlName="CURP"></ion-input>
         </ion-item>
@@ -46,10 +42,7 @@
       </form>
     </ion-list>
   </ion-card>
-  <div class="boton">
-  <button type="button" class="btn" (click)="agregarRFID(Nino, Salon, Padre, NumeroT, NombrePExterna,Estado, CURP, Mama)" id="open-loading" [routerLink]="['/listar-rfid']">
-    <ion-icon name="add-circle-outline"></ion-icon>Crear</button>
-  
+  <button type="button" class="btn" (click)="agregarRFID(Nino, Salon, Padre, NumeroT, NombrePExterna,Estado, CURP, Mama)" id="open-loading" [routerLink]="['/listar-rfid']">Crear</button>
   <ion-loading trigger="open-loading" message="Generando tarjeta RFID, por favor espere..." duration="3000"></ion-loading>
   </div>
 </ion-content>

@@ -31,7 +31,6 @@ export class CrearRfidComponent implements OnInit {
       Mama: ['', Validators.required],
       NumeroT: ['', Validators.required],
       NombrePExterna: ['', Validators.required],
-      Estado: ['', Validators.required],
       CURP: ['', Validators.required]
     });
     this.id = this.aRouter.snapshot.paramMap.get('id');
@@ -41,7 +40,7 @@ export class CrearRfidComponent implements OnInit {
     this.esEditar();
   }
 
-agregarRFID(Nino:any, Salon:any, Padre:any, NumeroT:any, NombrePExterna: any, Estado: any, CURP: any, Mama: any) {
+agregarRFID(Nino:any, Salon:any, Padre:any, NumeroT:any, NombrePExterna: any, CURP: any, Mama: any) {
   if (this.RFIDForm.valid) {
     console.log('Formulario válido:', this.RFIDForm.value);
     let rfid = {
@@ -51,7 +50,6 @@ agregarRFID(Nino:any, Salon:any, Padre:any, NumeroT:any, NombrePExterna: any, Es
       NombreMama: Mama.value,
       NumeroT: NumeroT.value,
       NombrePExterna: NombrePExterna.value,
-      Estado: Estado.value,
       CURP: CURP.value
     }
 
@@ -91,7 +89,6 @@ agregarRFID(Nino:any, Salon:any, Padre:any, NumeroT:any, NombrePExterna: any, Es
           Mama: data.NombreMama,
           NumeroT: data.NumeroT,
           NombrePExterna: data.NombrePExterna,
-          Estado: data.Estado,
           CURP: data.CURP
         })
       })

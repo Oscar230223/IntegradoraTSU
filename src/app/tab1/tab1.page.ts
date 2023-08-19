@@ -10,7 +10,7 @@ import { RFIDService } from 'src/app/services/rfid.service';
 export class Tab1Page implements OnInit{
   curpInput: string = '';
   listaRFID: RFID[] = [];
-  kid = {}
+  kid: any = {};
   constructor(private _rfidService: RFIDService) { }
 
   ngOnInit(): void {

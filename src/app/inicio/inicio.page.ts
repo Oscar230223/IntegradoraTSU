@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    const setTime = ()=>{
+      setTimeout(() =>{
+        console.log("okay");
+        this.router.navigate(['/login']);
+      },3000);
+    }
+    console.log("cargando");
+    setTime();
   }
 
 }

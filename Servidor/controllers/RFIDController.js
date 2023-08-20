@@ -5,7 +5,7 @@ exports.crearRFID = async (req, res) => {
     try {
         let nuevoRFID;
 
-        // Creamos nuestro RFID
+        // Creamos nuestro RFID (se registra niño)
         nuevoRFID = new RFIDModel(req.body);
 
         await nuevoRFID.save();

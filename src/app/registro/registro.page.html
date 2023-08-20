@@ -1,40 +1,43 @@
 <ion-header>
   <ion-toolbar color="login" class="inicio">
     <ion-buttons slot="start">
-        <ion-back-button icon="arrow-back" defaultHref="arrow" [routerLink]="['/listar-rfid']">
-        </ion-back-button>
-      </ion-buttons>
+      <ion-back-button icon="arrow-back" defaultHref="arrow" [routerLink]="['/listar-rfid']">
+      </ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>    
-    <ion-card-header color="morado" class="uno" >
-      <ion-card-title class="uno" color="negro" >Registro App</ion-card-title>
+  <ion-card>
+    <ion-card-header color="morado" class="uno">
+      <ion-card-title class="uno" color="negro">Registro App</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <form [formGroup]="formularioRegistro">
-        <br/>
+        <br />
         <ion-item>
-          <ion-input formControlName="email" placaholder="email"
-          label-placement="floating" label="Correo"></ion-input>
-          <ion-icon class="email" name="mail-outline"></ion-icon> 
+          <ion-input formControlName="email" placaholder="email" label-placement="floating" label="Correo"></ion-input>
+          <ion-icon class="email" name="mail-outline"></ion-icon>
         </ion-item>
-          <br/>  
-          <ion-item>
-          <ion-input formControlName="password" placeholder="password" type="password"
-          label-placement="floating" label="Contraseña"></ion-input>
+        <br />
+        <ion-item>
+          <ion-input formControlName="password" placeholder="password" type="password" label-placement="floating"
+            label="Contraseña"></ion-input>
+          <ion-icon class="contra" name="lock-closed-outline"></ion-icon>
+        </ion-item>
+        <ion-item>
+          <ion-input formControlName="pass" placeholder="pass" type="password" label-placement="floating"
+            label="Confirmar contraseña"></ion-input>
           <ion-icon class="contra" name="lock-closed-outline"></ion-icon>
         </ion-item>
       </form>
-      <br/>
+      <br />
       <div class="boton">
-    <button class="btn" id="open-loading" (click)="signUp()" [routerLink]="['/listar-rfid']">Registrar</button>
-    <ion-loading trigger="open-loading" message="Registrando, por favor espere..." duration="3000"></ion-loading>
-    <br/>
-  </div>
-  </ion-card-content>
+        <button class="btn" id="open-loading" (click)="signUp()" [disabled]="!formularioRegistro.valid"
+          [routerLink]="['/listar-rfid']">Registrar</button>
+        <ion-loading trigger="open-loading" message="Registrando, por favor espere..." duration="3000"></ion-loading>
+        <br />
+      </div>
+    </ion-card-content>
   </ion-card>
-  </ion-content>
-
-
+</ion-content>

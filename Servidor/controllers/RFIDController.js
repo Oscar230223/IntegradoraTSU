@@ -18,6 +18,7 @@ exports.crearRFID = async (req, res) => {
 
 exports.obtenerRFID = async (req, res) => {
     try {
+        // El await garantiza que el proceso sea asincrono es como una validacion 
         const RFIDList = await RFIDModel.find();
         res.json(RFIDList);
     } catch (error) {

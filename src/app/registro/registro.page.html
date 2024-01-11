@@ -21,14 +21,18 @@
         </ion-item>
         <br />
         <ion-item>
-          <ion-input formControlName="password" placeholder="password" type="password" label-placement="floating"
+          <ion-input formControlName="password" placeholder="password" [type]="showPassword ? 'text' : 'password'" label-placement="floating"
             label="Contraseña"></ion-input>
-          <ion-icon class="contra" name="lock-closed-outline"></ion-icon>
+          <ion-button fill="clear" slot="end" (click)="togglePasswordVisibility()">
+            <ion-icon class="contra" [name]="showPassword ? 'eye-off-outline' : 'eye-outline'"></ion-icon>
+          </ion-button>
         </ion-item>
         <ion-item>
-          <ion-input formControlName="pass" placeholder="pass" type="password" label-placement="floating"
+          <ion-input formControlName="pass" placeholder="pass" [type]="showPassword ? 'text' : 'password'" label-placement="floating"
             label="Confirmar contraseña"></ion-input>
-          <ion-icon class="contra" name="lock-closed-outline"></ion-icon>
+          <ion-button fill="clear" slot="end" (click)="togglePasswordVisibility()">
+            <ion-icon class="contra" [name]="showPassword ? 'eye-off-outline' : 'eye-outline'"></ion-icon>
+          </ion-button>
         </ion-item>
       </form>
       <br />

@@ -74,5 +74,10 @@ export class RegistroPage implements OnInit {
       control.get('pass')?.setErrors(null);
     }
   }
+  showPassword: boolean = false;
+
+togglePasswordVisibility() {
+  this.showPassword = !this.showPassword;
+}
 
 }
